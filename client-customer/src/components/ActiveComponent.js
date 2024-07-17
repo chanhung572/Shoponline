@@ -12,7 +12,7 @@ class Active extends Component {
   render() {
     return (
       <div className="align-center">
-        <h2 className="text-center">ACTIVE ACCOUNT</h2>
+        <h2 className="text-center" >ACTIVE ACCOUNT</h2>
         <form>
           <table className="align-center">
             <tbody>

@@ -39,7 +39,8 @@ span.link {
 /* menu.css */
 div.border-bottom {
   border-bottom: 1px solid black;
-  padding: 10px 0px 10px 0px;
+  padding: 15px 0px 15px 0px;
+  padding-left: 65px;
 }
 div.float-left {
   float: left;

@@ -33,18 +33,23 @@ class Home extends Component {
     });
     return (
       <div>
-        <div className="align-center">
-          <h2 className="text-center">NEW PRODUCTS</h2>
-          {newprods}
-        </div>
-        {this.state.hotprods.length > 0 ?
+        <img src="https://wallpapers.com/images/hd/air-jordan-logo-carbon-pattern-vcqt7dih07zwzyss.jpg" width="1150px" height="600px" alt="" />
+        <div>
           <div className="align-center">
-            <h2 className="text-center">HOT PRODUCTS</h2>
-            {hotprods}
+            <h2 className="text-center">NEW PRODUCTS</h2>
+            {newprods}
           </div>
-          : <div />}
+          {this.state.hotprods.length > 0 ?
+            <div className="align-center">
+              <h2 className="text-center">HOT PRODUCTS</h2>
+              {hotprods}
+            </div>
+            : null
+          }
+        </div>
       </div>
     );
+    
   }
   componentDidMount() {
     this.apiGetNewProducts();

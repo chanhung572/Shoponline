@@ -10,6 +10,7 @@ import Login from './LoginComponent';
 import Myprofile from './MyprofileComponent';
 import Mycart from './MycartComponent';
 import Myorders from './MyordersComponent';
+import Gmap from './GmapComponent';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 class Main extends Component {
@@ -30,6 +31,7 @@ class Main extends Component {
           <Route path='/myprofile' element={<Myprofile />} />
           <Route path='/mycart' element={<Mycart />} />
           <Route path='/myorders' element={<Myorders />} />
+          <Route path='/gmap' element={<Gmap />} />
         </Routes>
       </div>
     );

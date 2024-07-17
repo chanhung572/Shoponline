@@ -14,15 +14,17 @@ class Menu extends Component {
   render() {
     const cates = this.state.categories.map((item) => {
       return (
-        <li key={item._id} className="menu"><Link to={'/product/category/' + item._id}>{item.name}</Link></li>
+        <li key={item._id} className="menu"><Link to={'/product/category/' + item._id}  style={{ textDecoration: 'none' }}>{item.name}</Link></li>
       );
     });
     return (
       <div className="border-bottom">
         <div className="float-left">
           <ul className="menu">
-            <li className="menu"><Link to='/'>Home</Link></li>
+            <img src="https://cdn.shopify.com/s/files/1/0249/5892/6941/products/nikedrippingswoosh_600x.png?v=1607855524" width="70px" height="35px" alt="" style={{ float: 'left', marginLeft: '-70px' }} />
+            <li className="menu"><Link to='/'style={{ textDecoration: 'none' }} >Home</Link></li>
             {cates}
+            <li className="menu"><Link to='/gmap'style={{ textDecoration: 'none' }}>Gmap</Link></li>
           </ul>
         </div>
         <div className="float-right">

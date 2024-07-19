@@ -11,6 +11,8 @@ import Myprofile from './MyprofileComponent';
 import Mycart from './MycartComponent';
 import Myorders from './MyordersComponent';
 import Gmap from './GmapComponent';
+// import { ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 class Main extends Component {
@@ -32,6 +34,7 @@ class Main extends Component {
           <Route path='/mycart' element={<Mycart />} />
           <Route path='/myorders' element={<Myorders />} />
           <Route path='/gmap' element={<Gmap />} />
+          {/* <ToastContainer autoClose={3000} /> */}
         </Routes>
       </div>
     );

@@ -7,7 +7,7 @@ class Home extends Component {
                 {/* <Menu/> */}
                 <div className ="align-center">  
                     <h2 className ="text-center"> ADMIN HOME </h2>
-                    <img src ="http://cliparting.com/wp-content/uploads/2018/03/animated-emoticons-2018-13.gif" width ="800px" height ="600px" alt ="" />
+                    <img src ="https://png.pngtree.com/background/20230519/original/pngtree-the-air-jordans-are-on-a-table-in-a-row-picture-image_2656958.jpg" width ="1000px" height ="500px" alt ="" />
                 </div>
             </div>
         );

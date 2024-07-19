@@ -25,9 +25,9 @@ class Customer extends Component {
           <td>{item.active}</td>
           <td>
             {item.active === 0 ?
-              <span className="link" onClick={() => this.lnkEmailClick(item)}>EMAIL</span>
+              <span className="link" style={{ textDecoration: 'none', color: 'black' }} onClick={() => this.lnkEmailClick(item)}>EMAIL</span>
               :
-              <span className="link" onClick={() => this.lnkDeactiveClick(item)}>DEACTIVE</span>}
+              <span className="link" style={{ textDecoration: 'none', color: 'black' }} onClick={() => this.lnkDeactiveClick(item)}>DEACTIVE</span>}
           </td>
         </tr>
       );

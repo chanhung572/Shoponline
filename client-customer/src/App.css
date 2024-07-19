@@ -1,8 +1,19 @@
 /* styles.css */
 .body-customer {
-  width: 1150px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 20px;
+  width: 1700px;
   height: fit-content;
   margin: 0px auto;
+}
+.circle {
+  width: 100px;   
+  height: 20px;  
+  background-color: green;    
+  border-radius: 50%;  
+  text-align: center;  
+  line-height: 100px;   
 }
 .body-admin {
   width: fit-content;
@@ -11,15 +22,159 @@
 }
 div.inline {
   display: inline-block;
+  margin-right: 120px; 
+  margin-bottom: 20px;
+  max-width: 300px; /* Độ rộng tối đa của mỗi sản phẩm, tương tự như flex-basis */
 }
 figure.caption-right {
   display: flex;
   align-items: center;
 }
+.custom-account {
+  margin-left: 80px;
+}
 .align-center {
   width: fit-content;
   margin: 0px auto;
 }
+.text-center {
+  text-align: center;
+  font-weight: bold;
+}
+
+.text-list-products {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+
+.align-center-custom {
+  width: fit-content;
+  margin: 10px auto;
+}
+.align-custom-sign-profile {
+  width: fit-content;
+  margin: 10px auto;
+}
+.text-center-custom-sign-profile {
+  text-align: center;
+  margin-top: 150px;
+  font-weight: bold;
+  margin-left: 85px;
+}
+.text-center-custom {
+  text-align: center;
+  margin-top: 270px;
+  font-weight: bold;
+  margin-left: 85px;
+}
+.text-center-active {
+  text-align: center;
+  margin-top: 270px;
+  font-weight: bold;
+  margin-left: 65px;
+}
+.custom-login-active {
+  width: 270px;;
+  /* display: flex; */
+  padding: 10px 5px;
+  background: white;
+  border: 2px solid #8DEEEE;
+  border-radius: 30px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+}
+.custom-login-active:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.custom-login-active:first-child {
+  margin-left: 10px;
+}
+.custom-button {
+  text-align: center;
+}
+.custom-submit-login-active {
+  margin-top: 5px;
+  border: 3px solid;
+  border-radius: 10px;
+}
+.custom-submit-login-active:hover {
+  background-color: aqua;
+}
+.custom-submit-login-active:first-child {
+  margin-right: 10px;
+}
+.custom-sign-profile {
+  width: 300px;
+  /* display: flex; */
+  padding: 10px 5px;
+  background: white;
+  border: 2px solid #8DEEEE;
+  border-radius: 30px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+}
+.custom-sign-profile:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.custom-sign-profile:first-child {
+  margin-left: 10px;
+}
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+  border-radius: 50px;
+  position: relative;
+  margin-top: 17px;
+}
+.button {
+  background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+  position: absolute;
+  right: 10px;
+  bottom: 7px;
+  width: 55px;
+  height: 55px;
+  border-radius: 25px;
+  border: 1px;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Đổi giá trị để làm bóng lớn ra */
+  transform: translateX(3px);
+}
+input.keyword {
+  width: 270px;;
+  /* display: flex; */
+  padding: 17px 10px;
+  background: white;
+  border: 3px solid #8DEEEE;
+  border-radius: 30px;
+  margin-right: 0px;
+}
+input.keyword:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 24px 46px 24px 26px;
+}
+
 .align-valign-center {
   position: absolute;
   top: 50%;
@@ -28,9 +183,7 @@ figure.caption-right {
   padding: 0px 20px 20px 20px;
   border: 1px solid black;
 }
-.text-center {
-  text-align: center;
-}
+
 span.link {
   cursor: pointer;
   color: blue;
@@ -38,6 +191,7 @@ span.link {
 }
 /* menu.css */
 div.border-bottom {
+  margin-bottom: 15px;
   border-bottom: 1px solid black;
   padding: 15px 0px 15px 0px;
   padding-left: 65px;
@@ -52,39 +206,104 @@ div.float-clear {
   clear: both;
 }
 ul.menu {
-  margin: 0px;
+  margin-top: 30px;
   padding: 0px;
 }
 li.menu {
   display: inline;
-  margin-right: 20px;
+  margin-left: 95px;
   text-transform: uppercase;
 }
+
 form.search {
-  margin: 0px;
+  margin-top: 28x;
+  position: relative;
 }
-input.keyword {
-  width: 150px;
-}
+
 /* datatable.css */
 .datatable {
   text-align: center;
   border-collapse: collapse;
+  width: 800px;
 }
 /* header */
 tr:first-child.datatable {
-  background-color: #ffcc00;
+  background-color: aqua;
 }
 /* even rows, except header */
 tr:not(:first-child):nth-child(even).datatable {
-  background-color: #f5f5f5;
+  background-color: aliceblue;
 }
 /* odd rows, except header */
 tr:not(:first-child):nth-child(odd).datatable {
-  background-color: #ffeeaa;
+  background-color: aliceblue;
 }
 /* except header */
 tr:not(:first-child):hover.datatable {
-  background-color: #dcfcfc;
+  background-color: #CFCFCF;
   cursor: pointer;
+}
+
+/* button-add-cart*/
+.submit-add-cart {
+  padding: 3px 10px; 
+  margin-right: 10px;
+  color: black; 
+  font-weight: bold;
+  border: 1px solid black; 
+  border-radius: 2px;
+  cursor: pointer; 
+}
+.submit-add-cart:hover {
+  background-color: aqua;
+}
+.submit-add-cart:last-child {
+  margin-right: 0;
+}
+
+.footer {
+  height: 220px;
+  width: 1700px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.footer-col {
+  flex: 1; 
+}
+
+.footer-col h4 {
+  margin-bottom: 10px; 
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: left;
+}
+
+.footer-col p {
+  margin: 7px 0; 
+  font-size: 20px;
+}
+
+.footer-col h4:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  font-size: 18px;
+  background-color: #e91e63;
+  height: 3px;
+  box-sizing: border-box; 
+  width: 60px;
+}
+
+.footer-col p:hover {
+  color: #d60a95;
+  padding-left: 8px;
 }

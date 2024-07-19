@@ -29,23 +29,23 @@ class ProductDetail extends Component {
                 <table>
                   <tbody>
                     <tr>
-                      <td align="right">ID:</td>
+                      <td align="left">ID:</td>
                       <td>{prod._id}</td>
                     </tr>
                     <tr>
-                      <td align="right">Name:</td>
+                      <td align="left">Name:</td>
                       <td>{prod.name}</td>
                     </tr>
                     <tr>
-                      <td align="right">Price:</td>
-                      <td>{prod.price}</td>
+                      <td align="left">Price:</td>
+                      <td>{prod.price}$</td>
                     </tr>
                     <tr>
-                      <td align="right">Category:</td>
+                      <td align="left">Category:</td>
                       <td>{prod.category.name}</td>
                     </tr>
                     <tr>
-                      <td align="right">Quantity:</td>
+                      <td align="left">Quantity:</td>
                       <td>
                         <input
                           type="number"
@@ -61,7 +61,7 @@ class ProductDetail extends Component {
                     <tr>
                       <td></td>
                       <td>
-                        <input
+                        <input className="submit-add-cart"
                           type="submit"
                           value="ADD TO CART"
                           onClick={(e) => this.btnAdd2CartClick(e)}

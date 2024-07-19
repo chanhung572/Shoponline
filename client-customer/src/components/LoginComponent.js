@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import withRouter from '../utils/withRouter';
 import MyContext from '../contexts/MyContext';
+// import { toast } from 'react-toastify';
 
 class Login extends Component {
   static contextType = MyContext; // using this.context to access global state
@@ -14,22 +15,22 @@ class Login extends Component {
   }
   render() {
     return (
-      <div className="align-center">
-        <h2 className="text-center">CUSTOMER LOGIN</h2>
+      <div className="align-center-custom">
+        <h2 className="text-center-custom">CUSTOMER LOGIN</h2>
         <form>
-          <table className="align-center">
+          <table className="align-custom-login">
             <tbody>
               <tr>
                 <td>Username</td>
-                <td><input type="text" value={this.state.txtUsername} onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} /></td>
+                <td><input className='custom-login-active' type="text" value={this.state.txtUsername} onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} /></td>
               </tr>
               <tr>
                 <td>Password</td>
-                <td><input type="password" value={this.state.txtPassword} onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} /></td>
+                <td><input className='custom-login-active' type="password" value={this.state.txtPassword} onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} /></td>
               </tr>
               <tr>
                 <td></td>
-                <td><input type="submit" value="LOGIN" onClick={(e) => this.btnLoginClick(e)} /></td>
+                <td className='custom-button'><input className='custom-submit-login-active' type="submit" value="LOGIN" onClick={(e) => this.btnLoginClick(e)} /></td>
               </tr>
             </tbody>
           </table>
@@ -47,6 +48,7 @@ class Login extends Component {
       this.apiLogin(account);
     } else {
       alert('Please input username and password');
+      // toast.warning('Please input username and password');
     }
   }
   // apis
@@ -57,8 +59,10 @@ class Login extends Component {
         this.context.setToken(result.token);
         this.context.setCustomer(result.customer);
         this.props.navigate('/home');
+        // toast.success('Welcome to Authentic Sneakers');
       } else {
         alert(result.message);
+        // toast.error(result.message);
       }
     });
   }

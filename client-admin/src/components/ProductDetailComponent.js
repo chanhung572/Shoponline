@@ -28,18 +28,18 @@ class ProductDetail extends Component {
         <h2 className="text-center">PRODUCT DETAIL</h2>
         <form>
           <table>
-            <tbody>
+            <tbody className='datatable-product-detail'>
               <tr>
                 <td>ID</td>
-                <td><input type="text" value={this.state.txtID} onChange={(e) => { this.setState({ txtID: e.target.value }) }} readOnly={true} /></td>
+                <td><input className='table-input' type="text" value={this.state.txtID} onChange={(e) => { this.setState({ txtID: e.target.value }) }} readOnly={true} /></td>
               </tr>
               <tr>
                 <td>Name</td>
-                <td><input type="text" value={this.state.txtName} onChange={(e) => { this.setState({ txtName: e.target.value }) }} /></td>
+                <td><input className='table-input' type="text" value={this.state.txtName} onChange={(e) => { this.setState({ txtName: e.target.value }) }} /></td>
               </tr>
               <tr>
                 <td>Price</td>
-                <td><input type="text" value={this.state.txtPrice} onChange={(e) => { this.setState({ txtPrice: e.target.value }) }} /></td>
+                <td><input className='table-input' type="text" value={this.state.txtPrice} onChange={(e) => { this.setState({ txtPrice: e.target.value }) }} /></td>
               </tr>
               <tr>
                 <td>Image</td>
@@ -52,13 +52,13 @@ class ProductDetail extends Component {
               <tr>
                 <td></td>
                 <td>
-                    <input type="submit" value="ADD NEW" onClick={(e) => this.btnAddClick(e)} />
-                    <input type="submit" value="UPDATE" onClick={(e) => this.btnUpdateClick(e)} />
-                    <input type="submit" value="DELETE" onClick={(e) => this.btnDeleteClick(e)} />
+                    <input class="submit-detail" type="submit" value="ADD NEW" onClick={(e) => this.btnAddClick(e)} />
+                    <input class="submit-detail" type="submit" value="UPDATE" onClick={(e) => this.btnUpdateClick(e)} />
+                    <input class="submit-detail" type="submit" value="DELETE" onClick={(e) => this.btnDeleteClick(e)} />
                 </td>
               </tr>
               <tr>
-                <td colSpan="2"><img src={this.state.imgProduct} width="300px" height="300px" alt="" /></td>
+                <td colSpan="2"><img src={this.state.imgProduct} width="350px" height="300px" style={{ marginTop: '10px' }} alt="" /></td>
               </tr>
             </tbody>
           </table>

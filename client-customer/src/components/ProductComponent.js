@@ -16,14 +16,14 @@ class Product extends Component {
         <div key={item._id} className="inline">
           <figure>
             <Link to={'/product/' + item._id}><img src={"data:image/jpg;base64," + item.image} width="300px" height="300px" alt="" /></Link>
-            <figcaption className="text-center">{item.name}<br />Price: {item.price}</figcaption>
+            <figcaption className="text-center">{item.name}<br />Price: {item.price}$</figcaption>
           </figure>
         </div>
       );
     });
     return (
       <div className="text-center">
-        <h2 className="text-center">LIST PRODUCTS</h2>
+        <h2 className="text-list-products">LIST PRODUCTS</h2>
         {prods}
       </div>
     );

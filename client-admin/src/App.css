@@ -1,6 +1,6 @@
 /* styles . css */
 .body-customer {
-  width : 1150px ;
+  width : 1000px ;
   height : fit-content;
   margin : 0px auto ;
 }
@@ -28,6 +28,14 @@ figure.caption-right {
   padding: 0px 20px 20px 20px;
   border : 1px solid black;
 }
+.text-category-list {
+  text-align: center;
+  margin-right: 150px;
+}
+.text-category-detail {
+  text-align: center;
+  margin-left: 40px;
+}
 .text-center {
   text-align: center;
 }
@@ -40,10 +48,10 @@ span.link {
 div.border-bottom {
   border-bottom : 1px solid black;
   padding : 10px 0px 10px 0px;
+  width: auto;
 }
 div.float-left{
   float : left ;
-  text-decoration: none;
 }
 div.float-right {
   float : right ;
@@ -68,23 +76,84 @@ input.keyword {
 }
 /* datatable . css */
 .datatable {
-  text-align : center ;
+  text-align : center;
+  border-collapse : collapse;
+  width: 1000px;
+}
+
+/* PRODUCT PAGE*/
+.text-product-list {
+  text-align: center;
+  margin-right: 150px;
+}
+
+.datatable-product-list {
+  text-align : center;
+  border-collapse : collapse;
+  width: 1000px;
+  background-color: aqua;
+  margin-right: 150px;
+}
+
+.datatable-product-detail {
+  text-align : left ;
   border-collapse : collapse ;
 }
+
+
+/* CATEGORY PAGE*/
+.datatable-category-list {
+  text-align : center;
+  border-collapse : collapse;
+  width: 400px;
+  background-color: aqua;
+  margin-right: 150px;
+}
+.dadatatable-category-detail {
+  text-align : left ;
+  border-collapse : collapse ;
+}
+.table-input {
+  width: 100%; 
+  padding: 8px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+}
+.table-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.submit-detail {
+  padding: 3px 10px; 
+  margin-right: 10px;
+  color: black; 
+  border: 1px solid black; 
+  border-radius: 2px;
+  cursor: pointer; 
+}
+.submit-detail:hover {
+  background-color: aqua;
+}
+.submit-detail:last-child {
+  margin-right: 0;
+}
+
 /* header */
 tr:first-child.datatable {
-  background-color : #ffcc00 ;
+  background-color : aqua ;
 }
 /* even rows , except header */
 tr:not(:first-child):nth-child(even).datatable {
-  background-color : #f5f5f5;
+  background-color : aliceblue;
 }
 /* odd rows , except header */
 tr:not(:first-child):nth-child(odd).datatable {
-  background-color : #ffeeaa ;
+  background-color : aliceblue;
 }
 /* except header */
 tr:not(:first-child):hover.datatable {
-  background-color : #dcfcfc ;
+  background-color : #CFCFCF;
   cursor : pointer ;
 }

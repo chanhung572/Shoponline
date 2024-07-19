@@ -9,16 +9,16 @@ class Menu extends Component {
                 <div className ="border-bottom">
                     <div className ="float-left">
                         <ul className ="menu">
-                            <li className ="menu"><Link to ='/admin/home'>Home</Link></li>
-                            <li className ="menu"><Link to ='/admin/category'>Category</Link> </li>
-                            <li className ="menu"><Link to ='/admin/product'> Product</Link> </li>
-                            <li className="menu"><Link to='/admin/order'>Order</Link></li>
-                            <li className="menu"><Link to='/admin/customer'>Customer</Link></li>
+                            <li className ="menu"><Link to ='/admin/home' style={{ textDecoration: 'none', color: 'black' }}>Home</Link></li>
+                            <li className ="menu"><Link to ='/admin/category' style={{ textDecoration: 'none', color: 'black' }}>Category</Link> </li>
+                            <li className ="menu"><Link to ='/admin/product' style={{ textDecoration: 'none', color: 'black' }}> Product</Link> </li>
+                            <li className="menu"><Link to='/admin/order' style={{ textDecoration: 'none', color: 'black' }}>Order</Link></li>
+                            <li className="menu"><Link to='/admin/customer' style={{ textDecoration: 'none', color: 'black' }}>Customer</Link></li>
                         </ul>
                     </div>
                     <div className ="float-right">
                         Hello <b>{this.context.username}</b> | 
-                        <Link to ='/admin' onClick ={() => this.lnkLogoutClick()}>Logout</Link>
+                        <Link to ='/admin' style={{ textDecoration: 'none', color: 'black' }} onClick ={() => this.lnkLogoutClick()}>Logout</Link>
                     </div>
                     <div className ="float-clear"/>
                 </div>

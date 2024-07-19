@@ -21,17 +21,18 @@ class Menu extends Component {
       <div className="border-bottom">
         <div className="float-left">
           <ul className="menu">
-            <img src="https://cdn.shopify.com/s/files/1/0249/5892/6941/products/nikedrippingswoosh_600x.png?v=1607855524" width="70px" height="35px" alt="" style={{ float: 'left', marginLeft: '-70px' }} />
-            <li className="menu"><Link to='/'style={{ textDecoration: 'none' }} >Home</Link></li>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/010/994/232/small/nike-logo-black-clothes-design-icon-abstract-football-illustration-with-white-background-free-vector.jpg" alt="" style={{ float: 'left', marginLeft: '-70px',marginTop: '-8px', width: '100px', height:'50px' }} />
+            <li className="menu"><Link to='/' style={{width: "200px", height:"100px", border: "2px solid", borderRadius:"10px", backgroundColor: 'aqua', padding:"2px 8px 3px 9px", marginLeft: '-50px', textDecoration: 'none'}} >Home</Link></li>
             {cates}
-            <li className="menu"><Link to='/gmap'style={{ textDecoration: 'none' }}>Gmap</Link></li>
+            <li className="menu"><Link to='/gmap' style={{ textDecoration: 'none' }}>Gmap</Link></li>
           </ul>
         </div>
+
         <div className="float-right">
-          <form className="search">
-            <input type="search" placeholder="Enter keyword" className="keyword" value={this.state.txtKeyword} onChange={(e) => { this.setState({ txtKeyword: e.target.value }) }} />
-            <input type="submit" value="SEARCH" onClick={(e) => this.btnSearchClick(e)} />
-          </form>
+          <div className="searchBox">
+            <input type="searchInput" placeholder="Search something..." className="keyword" value={this.state.txtKeyword} onChange={(e) => { this.setState({ txtKeyword: e.target.value }) }} />
+            <button className="button" value="search" onClick={(e) => this.btnSearchClick(e)} />
+          </div>
         </div>
         <div className="float-clear" />
       </div>

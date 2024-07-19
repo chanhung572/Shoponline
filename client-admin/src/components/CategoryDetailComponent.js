@@ -15,26 +15,26 @@ class CategoryDetail extends Component{
     render(){
         return(
             <div className="float-right">
-                <h2 className="text-center">CATEGORY DETAIL</h2>
+                <h2 className="text-category-detail">CATEGORY DETAIL</h2>
             <form>
                 <table>
-                    <tbody>
+                    <tbody className='datatable-category-detail'>
                         <tr>
                             <td>ID</td>
-                            <td><input type="text" value={this.state.txtID} onChange={(e) => {this.setState({ txtID: e.target.value })}} readOnly={true}/></td>
+                            <td><input class="table-input" type="text" value={this.state.txtID} onChange={(e) => {this.setState({ txtID: e.target.value })}} readOnly={true} /></td>
                         </tr>
 
                         <tr>
                             <td>Name</td>
-                            <td><input type="text" value={this.state.txtName} onChange={(e) => {this.setState({ txtName: e.target.value })}}/></td>
+                            <td><input class="table-input" type="text" value={this.state.txtName} onChange={(e) => {this.setState({ txtName: e.target.value })}} /></td>
                         </tr>
 
                         <tr>
                         <td></td>
                         <td>
-                            <input type="submit" value ="ADD NEW" onClick ={(e) => this.btnAddClick(e) } />
-                            <input type="submit" value ="UPDATE" onClick ={(e) => this.btnUpdateClick(e) } />
-                            <input type="submit" value ="DELETE" onClick ={(e) => this.btnDeleteClick(e) } />
+                            <input class="submit-detail" type="submit" value ="ADD NEW" onClick ={(e) => this.btnAddClick(e) } />
+                            <input class="submit-detail" type="submit" value ="UPDATE" onClick ={(e) => this.btnUpdateClick(e) } />
+                            <input class="submit-detail" type="submit" value ="DELETE" onClick ={(e) => this.btnDeleteClick(e) } />
                         </td>
                         </tr>
                     </tbody>

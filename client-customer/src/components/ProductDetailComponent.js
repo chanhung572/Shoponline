@@ -9,6 +9,7 @@ class ProductDetail extends Component {
     this.state = {
       product: null,
       txtQuantity: 1,
+      txtsize: 35,
     };
   }
   render() {
@@ -20,8 +21,8 @@ class ProductDetail extends Component {
           <figure className="caption-right">
             <img
               src={"data:image/jpg;base64," + prod.image}
-              width="400px"
-              height="400px"
+              width="300px"
+              height="200px"
               alt=""
             />
             <figcaption>
@@ -47,7 +48,7 @@ class ProductDetail extends Component {
                     <tr>
                       <td align="left">Quantity:</td>
                       <td>
-                        <input
+                        <input className="custom-quanity"
                           type="number"
                           min="1"
                           max="99"
@@ -104,7 +105,7 @@ class ProductDetail extends Component {
         mycart[index].quantity += quantity;
       }
       this.context.setMycart(mycart);
-      alert('OK BABY!');
+      alert('Add Successfull!');
     } else {
       alert('Please input quantity');
     }

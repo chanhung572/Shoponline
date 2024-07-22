@@ -14,30 +14,30 @@ class Signup extends Component {
   }
   render() {
     return (
-      <div className="align-custom-sign-profile">
-        <h2 className="text-center-custom-sign-profile">SIGN-UP</h2>
+      <div className="align-center-custom">
+        <h2 className="text-center-custom">SIGN-UP</h2>
         <form>
-          <table className="align-custom-sign-profile">
+          <table className="align-custom-login">
             <tbody>
               <tr>
                 <td>Username</td>
-                <td><input className='custom-sign-profile' type="text" value={this.state.txtUsername} onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} /></td>
+                <td><input className='custom-login-active' type="text" value={this.state.txtUsername} onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} /></td>
               </tr>
               <tr>
                 <td>Password</td>
-                <td><input className='custom-sign-profile' type="password" value={this.state.txtPassword} onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} /></td>
+                <td><input className='custom-login-active' type="password" value={this.state.txtPassword} onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} /></td>
               </tr>
               <tr>
                 <td>Name</td>
-                <td><input className='custom-sign-profile' type="text" value={this.state.txtName} onChange={(e) => { this.setState({ txtName: e.target.value }) }} /></td>
+                <td><input className='custom-login-active' type="text" value={this.state.txtName} onChange={(e) => { this.setState({ txtName: e.target.value }) }} /></td>
               </tr>
               <tr>
                 <td>Phone</td>
-                <td><input className='custom-sign-profile' type="tel" value={this.state.txtPhone} onChange={(e) => { this.setState({ txtPhone: e.target.value }) }} /></td>
+                <td><input className='custom-login-active' type="tel" value={this.state.txtPhone} onChange={(e) => { this.setState({ txtPhone: e.target.value }) }} /></td>
               </tr>
               <tr>
                 <td>Email</td>
-                <td><input className='custom-sign-profile' type="email" value={this.state.txtEmail} onChange={(e) => { this.setState({ txtEmail: e.target.value }) }} /></td>
+                <td><input className='custom-login-active' type="email" value={this.state.txtEmail} onChange={(e) => { this.setState({ txtEmail: e.target.value }) }} /></td>
               </tr>
               <tr>
                 <td></td>

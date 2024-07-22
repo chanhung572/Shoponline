@@ -14,7 +14,7 @@ class Active extends Component {
       <div className="align-center-custom">
         <h2 className="text-center-active" >ACTIVE ACCOUNT</h2>
         <form>
-          <table className="align-center-custom">
+          <table className="align-custom-login">
             <tbody>
               <tr>
                 <td>ID</td>
@@ -51,9 +51,9 @@ class Active extends Component {
     axios.post('/api/customer/active', body).then((res) => {
       const result = res.data;
       if (result) {
-        alert('OK BABY!');
+        alert('Successful Activation!');
       } else {
-        alert('SORRY BABY!');
+        alert('Activation Failed!');
       }
     });
   }

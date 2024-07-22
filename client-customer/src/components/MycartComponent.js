@@ -18,6 +18,7 @@ class Mycart extends Component {
           <td>{item.product.price}</td>
           <td>{item.quantity}</td>
           <td>{item.product.price * item.quantity}</td>
+          <td>{item.size}</td>
           <td><span className="link" onClick={() => this.lnkRemoveClick(item.product._id)}>Remove</span></td>
           <td><span className="link" onClick={() => this.lnkCheckoutClick()}>CHECKOUT</span></td>
         </tr>
@@ -44,7 +45,7 @@ class Mycart extends Component {
               <td colSpan="6"></td>
               <td>Total</td>
               <td>{CartUtil.getTotal(this.context.mycart)}</td>
-              <td><span className="link">CHECKOUT</span></td>
+              {/* <td><span className="link">CHECKOUT</span></td> */}
             </tr>
           </tbody>
         </table>
@@ -61,7 +62,7 @@ class Mycart extends Component {
     }
   }
   lnkCheckoutClick() {
-    if (window.confirm('ARE YOU SURE?')) {
+    if (window.confirm('Payment confirmation?')) {
       if (this.context.mycart.length > 0) {
         const total = CartUtil.getTotal(this.context.mycart);
         const items = this.context.mycart;
@@ -72,7 +73,7 @@ class Mycart extends Component {
           this.props.navigate('/login');
         }
       } else {
-        alert('Your cart is empty');
+        alert('No products in your cart');
       }
     }
   }
@@ -83,11 +84,11 @@ class Mycart extends Component {
     axios.post('/api/customer/checkout', body, config).then((res) => {
       const result = res.data;
       if (result) {
-        alert('OK BABY!');
+        alert('Payment successful');
         this.context.setMycart([]);
         this.props.navigate('/home');
       } else {
-        alert('SORRY BABY!');
+        alert('Payment Failed');
       }
     });
   }

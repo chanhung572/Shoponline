@@ -52,7 +52,7 @@ btnAddClick(e) {
             const cate = { name: name };
             this.apiPostCategory(cate);
         } else {
-          alert('Please input name');
+          alert('Please input Name');
         }
 }
 
@@ -64,7 +64,7 @@ btnUpdateClick(e) {
         const cate = { name: name };
         this.apiPutCategory (id, cate );
     }   else {
-        alert ('Please input id and name');
+        alert ('Please input ID and Name');
     }
 }
 
@@ -75,7 +75,7 @@ btnDeleteClick(e) {
         if (id) {
             this.apiDeleteCategory(id);
         }   else {
-            alert('Please input id');
+            alert('Please input ID');
         }  
     }
 }
@@ -86,10 +86,10 @@ apiPostCategory(cate) {
     axios.post('/api/admin/categories', cate , config).then((res) => {
         const result = res.data;
         if (result) {
-            alert ('OK BABY!');
+            alert ('Add Successful!');
             this.apiGetCategories();
         }   else {
-            alert('SORRY BABY!');
+            alert('Add Failed!');
         }
     });
 }
@@ -108,10 +108,10 @@ apiPutCategory(id, cate ) {
     axios.put('/api/admin/categories/' + id, cate, config).then((res) => {
         const result = res.data;
         if(result) {
-            alert('OK BABY !');
+            alert('Update Successful!');
             this.apiGetCategories();
         }   else {
-            alert('SORRY BABY !');
+            alert('Update Failed!');
         }
     }) ;
 }
@@ -121,10 +121,10 @@ apiDeleteCategory(id) {
     axios.delete('/api/admin/categories/' + id, config).then((res) => {
         const result = res.data;
         if (result) {
-            alert('OK BABY!');
+            alert('Delete Successful!');
             this.apiGetCategories();
         }   else {
-            alert('SORRY BABY!');
+            alert('Delete Failed!');
         }
     });
 }

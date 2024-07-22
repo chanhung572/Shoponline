@@ -102,7 +102,7 @@ class ProductDetail extends Component {
       const prod = { name: name, price: price, category: category, image: image };
       this.apiPostProduct(prod);
     } else {
-      alert('Please input name and price and category and image');
+      alert('Please input Name, Price, Category and image');
     }
   }
 
@@ -117,7 +117,7 @@ class ProductDetail extends Component {
       const prod = { name: name, price: price, category: category, image: image };
       this.apiPutProduct(id, prod);
     } else {
-      alert('Please input id and name and price and category and image');
+      alert('Please input Name, Price, Category and image');
     }
   }
 
@@ -128,7 +128,7 @@ class ProductDetail extends Component {
       if (id) {
         this.apiDeleteProduct(id);
       } else {
-        alert('Please input id');
+        alert('Please input ID');
       }
     }
   }
@@ -146,10 +146,10 @@ class ProductDetail extends Component {
     axios.post('/api/admin/products', prod, config).then((res) => {
       const result = res.data;
       if (result) {
-        alert('OK BABY!');
+        alert('Add Successful!');
         this.apiGetProducts();
       } else {
-        alert('SORRY BABY!');
+        alert('Add Failed!');
       }
     });
   }
@@ -175,10 +175,10 @@ class ProductDetail extends Component {
     axios.put('/api/admin/products/' + id, prod, config).then((res) => {
       const result = res.data;
       if (result) {
-        alert('OK BABY!');
+        alert('Update Successful!');
         this.apiGetProducts();
       } else {
-        alert('SORRY BABY!');
+        alert('Update Failed!');
       }
     });
   }
@@ -188,10 +188,10 @@ class ProductDetail extends Component {
     axios.delete('/api/admin/products/' + id, config).then((res) => {
       const result = res.data;
       if (result) {
-        alert('OK BABY!');
+        alert('Delete Successful!');
         this.apiGetProducts();
       } else {
-        alert('SORRY BABY!');
+        alert('Delete Failed!');
       }
     });
   }

@@ -36,6 +36,7 @@ class Myorders extends Component {
             <td><img src={"data:image/jpg;base64," + item.product.image} width="70px" height="70px" alt="" /></td>
             <td>{item.product.price}</td>
             <td>{item.quantity}</td>
+            <td>{item.size}</td>
             <td>{item.product.price * item.quantity}</td>
           </tr>
         );

@@ -8,6 +8,7 @@
   width : fit-content;
   height : fit-content;
   margin : 0px auto;
+  font-family: system-ui;
 }
 div.inline {
   display : inline-block;

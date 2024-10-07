@@ -1,0 +1,160 @@
+/* styles . css */
+.body-customer {
+  width : 1000px ;
+  height : fit-content;
+  margin : 0px auto ;
+}
+.body-admin {
+  width : fit-content;
+  height : fit-content;
+  margin : 0px auto;
+  font-family: system-ui;
+}
+div.inline {
+  display : inline-block;
+}
+figure.caption-right {
+  display : flex ;
+  align-items : center;
+}
+.align-center {
+  width: fit-content;
+  margin: 0px auto;
+}
+.align-valign-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  padding: 0px 20px 20px 20px;
+  border : 1px solid black;
+}
+.text-category-list {
+  text-align: center;
+  margin-right: 150px;
+}
+.text-category-detail {
+  text-align: center;
+  margin-left: 40px;
+}
+.text-center {
+  text-align: center;
+}
+span.link {
+  cursor: pointer;
+  color: blue;
+  text-decoration : underline;
+}
+/* menu . css */
+div.border-bottom {
+  border-bottom : 1px solid black;
+  padding : 10px 0px 10px 0px;
+  width: auto;
+}
+div.float-left{
+  float : left ;
+}
+div.float-right {
+  float : right ;
+}
+div.float-clear {
+  clear : both ;
+}
+ul.menu {
+  margin : 0px;
+  padding : 0px;
+}
+li.menu {
+  display : inline;
+  margin-right : 20px;
+  text-transform : uppercase;
+}
+form.search {
+  margin : 0px;
+}
+input.keyword {
+  width : 110px ;
+}
+/* datatable . css */
+.datatable {
+  text-align : center;
+  border-collapse : collapse;
+  width: 1000px;
+}
+
+/* PRODUCT PAGE*/
+.text-product-list {
+  text-align: center;
+  margin-right: 150px;
+}
+
+.datatable-product-list {
+  text-align : center;
+  border-collapse : collapse;
+  width: 1000px;
+  background-color: aqua;
+  margin-right: 150px;
+}
+
+.datatable-product-detail {
+  text-align : left ;
+  border-collapse : collapse ;
+}
+
+
+/* CATEGORY PAGE*/
+.datatable-category-list {
+  text-align : center;
+  border-collapse : collapse;
+  width: 400px;
+  background-color: aqua;
+  margin-right: 150px;
+}
+.dadatatable-category-detail {
+  text-align : left ;
+  border-collapse : collapse ;
+}
+.table-input {
+  width: 100%; 
+  padding: 8px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+}
+.table-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.submit-detail {
+  padding: 3px 10px; 
+  margin-right: 10px;
+  color: black; 
+  border: 1px solid black; 
+  border-radius: 2px;
+  cursor: pointer; 
+}
+.submit-detail:hover {
+  background-color: aqua;
+}
+.submit-detail:last-child {
+  margin-right: 0;
+}
+
+/* header */
+tr:first-child.datatable {
+  background-color : aqua ;
+}
+/* even rows , except header */
+tr:not(:first-child):nth-child(even).datatable {
+  background-color : aliceblue;
+}
+/* odd rows , except header */
+tr:not(:first-child):nth-child(odd).datatable {
+  background-color : aliceblue;
+}
+/* except header */
+tr:not(:first-child):hover.datatable {
+  background-color : #CFCFCF;
+  cursor : pointer ;
+}

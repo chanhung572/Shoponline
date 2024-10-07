@@ -1,0 +1,139 @@
+import axios from 'axios';
+import React, {Component} from 'react';
+import MyContext from'../contexts/MyContext';
+
+class CategoryDetail extends Component{
+    static contextType = MyContext; //usingthis.contexttoaccessglobalstate
+    constructor(props) {
+        super(props);
+        this.state = {
+            txtID:'',
+            txtName:''
+        };
+}
+
+    render(){
+        return(
+            <div className="float-right">
+                <h2 className="text-category-detail">CATEGORY DETAIL</h2>
+            <form>
+                <table>
+                    <tbody className='datatable-category-detail'>
+                        <tr>
+                            <td>ID</td>
+                            <td><input class="table-input" type="text" value={this.state.txtID} onChange={(e) => {this.setState({ txtID: e.target.value })}} readOnly={true} /></td>
+                        </tr>
+
+                        <tr>
+                            <td>Name</td>
+                            <td><input class="table-input" type="text" value={this.state.txtName} onChange={(e) => {this.setState({ txtName: e.target.value })}} /></td>
+                        </tr>
+
+                        <tr>
+                        <td></td>
+                        <td>
+                            <input class="submit-detail" type="submit" value ="ADD NEW" onClick ={(e) => this.btnAddClick(e) } />
+                            <input class="submit-detail" type="submit" value ="UPDATE" onClick ={(e) => this.btnUpdateClick(e) } />
+                            <input class="submit-detail" type="submit" value ="DELETE" onClick ={(e) => this.btnDeleteClick(e) } />
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        );
+    }
+
+// event - handlers
+btnAddClick(e) {
+    e.preventDefault();
+    const name = this.state.txtName;
+        if(name) {
+            const cate = { name: name };
+            this.apiPostCategory(cate);
+        } else {
+          alert('Please input Name');
+        }
+}
+
+btnUpdateClick(e) {
+    e.preventDefault();
+    const id = this.state.txtID;
+    const name = this.state.txtName;
+    if(id && name) {
+        const cate = { name: name };
+        this.apiPutCategory (id, cate );
+    }   else {
+        alert ('Please input ID and Name');
+    }
+}
+
+btnDeleteClick(e) {
+    e.preventDefault() ;
+    if (window.confirm('ARE YOU SURE ?')) {
+        const id = this.state.txtID;
+        if (id) {
+            this.apiDeleteCategory(id);
+        }   else {
+            alert('Please input ID');
+        }  
+    }
+}
+
+// apis
+apiPostCategory(cate) {
+    const config = { headers:{'x-access-token': this.context.token}};
+    axios.post('/api/admin/categories', cate , config).then((res) => {
+        const result = res.data;
+        if (result) {
+            alert ('Add Successful!');
+            this.apiGetCategories();
+        }   else {
+            alert('Add Failed!');
+        }
+    });
+}
+
+apiGetCategories() {
+    const config = {headers:{'x-access-token': this.context.token}};
+    axios.get('/api/admin/categories', config ).then((res) => {
+        const result = res.data;
+        this.props.updateCategories(result);
+    });
+}
+
+
+apiPutCategory(id, cate ) {
+    const config = { headers: {'x-access-token': this.context.token }};
+    axios.put('/api/admin/categories/' + id, cate, config).then((res) => {
+        const result = res.data;
+        if(result) {
+            alert('Update Successful!');
+            this.apiGetCategories();
+        }   else {
+            alert('Update Failed!');
+        }
+    }) ;
+}
+
+apiDeleteCategory(id) {
+    const config = {headers: {'x-access-token': this.context.token }};
+    axios.delete('/api/admin/categories/' + id, config).then((res) => {
+        const result = res.data;
+        if (result) {
+            alert('Delete Successful!');
+            this.apiGetCategories();
+        }   else {
+            alert('Delete Failed!');
+        }
+    });
+}
+   
+    componentDidUpdate(prevProps){
+        if (this.props.item !== prevProps.item){
+            this.setState({ txtID: this.props.item._id, txtName: this.props.item.name });
+        }
+    }
+
+}
+export default CategoryDetail;
